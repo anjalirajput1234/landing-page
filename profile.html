@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Section</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>body {
+      font-family: Arial, sans-serif;
+      background-color: #fef7f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+  }
+  
+  .profile-container {
+      background-color: rgb(16, 16, 16);
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      height: 700px;
+      width: 700px;
+      text-align: center;
+  }
+  
+  .profile-header {
+      margin-bottom: 20px;
+  }
+  
+  .profile-header img {
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+  }
+  
+  .profile-header h1 {
+      font-size: 24px;
+      margin: 10px 0 0;
+  }
+  
+  .profile-bio p {
+      font-size: 16px;
+      color: #f9f5f5;
+  }
+  
+  #edit-button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+  }
+  
+  #edit-button:hover {
+      background-color: #0056b3;
+  }
+  
+  .edit-form {
+      display: none;
+      margin-top: 20px;
+      text-align: left;
+  }
+  
+  .edit-form input, .edit-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+  }
+  
+  #save-button {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+  }
+  
+  #save-button:hover {
+      background-color: #218838;
+  }
+  </style>
+</head>
+<body>
+    <div class="profile-container">
+        <div class="profile-header">
+            <img src="profile-picture.jpg" alt="Profile Picture" id="profile-picture">
+            <h1 id="profile-name">ANJALI RAJPUT</h1>
+        </div>
+        <div class="profile-bio">
+            <p id="profile-bio">Web Developer  study at IIT Patna</p>
+        </div>
+        <button id="edit-button">Edit Profile</button>
+        <div id="edit-form" class="edit-form">
+            <input type="file" id="new-profile-picture">
+            <input type="text" id="new-profile-name" placeholder="Enter new name">
+            <textarea id="new-profile-bio" placeholder="Enter new bio"></textarea>
+            <button id="save-button">Save</button>
+        </div>
+    </div>
+
+    <script>document.getElementById('edit-button').addEventListener('click', function() {
+      document.getElementById('edit-form').style.display = 'block';
+  });
+  
+  document.getElementById('save-button').addEventListener('click', function() {
+      var newProfilePicture = document.getElementById('new-profile-picture').files[0];
+      var newProfileName = document.getElementById('new-profile-name').value;
+      var newProfileBio = document.getElementById('new-profile-bio').value;
+  
+      if (newProfilePicture) {
+          var reader = new FileReader();
+          reader.onload = function (e) {
+              document.getElementById('profile-picture').src = e.target.result;
+          };
+          reader.readAsDataURL(newProfilePicture);
+      }
+  
+      if (newProfileName) {
+          document.getElementById('profile-name').innerText = newProfileName;
+      }
+  
+      if (newProfileBio) {
+          document.getElementById('profile-bio').innerText = newProfileBio;
+      }
+  
+      document.getElementById('edit-form').style.display = 'none';
+  });
+  </script>
+</body>
+</html>

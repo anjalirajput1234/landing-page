@@ -1,0 +1,581 @@
+
+    
+
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sidebar Example</title>
+<style>
+ 
+ html,body{
+   min-height: 100%;
+   max-width: 100%;
+}
+.main{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.nav{
+    height: 100px;
+    width: 100%; 
+    border-bottom: 2px solid #545050;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3vw;
+    background-color:whitesmoke;
+}
+.nav-part2{
+    display: flex;
+    gap: 4vw;
+}
+.nav h2{
+    font-size: 2vw;
+    font-weight: 700;
+    color:rgb(0,0,33);
+}
+.nav h1 i{
+    font-size: 1.5vw;
+    text-decoration: none;
+    color: #111;
+}
+
+.nav span{
+    color: #FFA500;
+   font-style:Serif;
+}
+.nav h4{
+    font-size: 1.3vw;
+}
+.nav h4 i{
+    font-size: 1.3vw;
+    text-decoration: none;
+}
+.nav h4 a{
+    color: #0e0e1a;
+    text-decoration: none;
+    
+}
+.nav h3 i{
+    font-size: 1.7vw;
+    text-decoration: none;
+    color: #111;
+}
+.nav h3 i:hover{
+    color: rgb(167, 19, 197);
+    font-size: 1.8vw;
+    cursor: pointer;
+}
+.nav h1 i:hover{
+    color: rgb(167, 19, 197);
+    font-size: 1.9vw;
+    cursor: pointer;
+}
+.nav i {
+font-size: 1vw; 
+flex-wrap: 800;
+}
+.nav button{
+    background-color:#FFA500; 
+    font-size: 1vw;
+    border-radius: 0.5vw;  
+}
+.nav h4:hover{
+    color: rgb(167, 19, 197);
+    font-size: 1.25vw;
+    cursor: pointer;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  .sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  .sidebar a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+  }
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  .main-content {
+    margin-left: 250px; /* Same as the width of the sidebar */
+    padding: 0px 10px;
+  }
+/*.sidebar {
+    width: 250px;
+    background-color:white;
+    color: rgb(18, 15, 15);
+    padding: 15px;
+    height: 100%;
+    position: relative
+}
+
+.sidebar h2 {
+    text-align: center;
+}
+
+.sidebar a {
+    color: rgb(4, 3, 3);
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar a:hover {
+    background-color: #f4eaea;
+}*/
+
+.content{
+    height: 700px;
+    width: 100%;
+    display: flex;
+    position: relative;
+    background-image:url("image.png");
+    background-size: cover;
+}
+.left{
+    height: 100%;
+    width: 50%;
+    background-color: wh;
+    padding: 5vw 8vw;
+}
+
+.left h1{
+    font-size: 4vw;
+    color: whitesmoke;
+}
+.left p{
+    color: whitesmoke;
+
+}
+.left h1 span{
+    color: #FFA500;
+}
+button{
+    background-color:rgb(206, 145, 24);
+    color: black;
+    font-size: 1.2vw;
+    border-color: #f4edf2;
+    cursor: pointer;
+}
+.firstSection{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 80px 0;
+    background-color: rgb(207, 205, 203);
+}
+.firstSection > div{
+    width: 30%;
+}
+.leftSection{
+    font-size: 2.5rem;
+    margin: 50px 0;
+    font-style: italic;
+}
+.leftSection button{
+    padding: 50px 0;
+}
+.leftSection .btn{
+padding: 12px;
+background-color: white;
+color: blueviolet;
+bottom: 2px solid white;
+border-radius: 6px;
+font-size: 20px;
+cursor: pointer;
+}
+.leftSection span{
+    color: blueviolet;
+}
+.rightSection img{
+   width: 100%;
+   height: 90%;
+   margin: 120px 0;
+   background-color:rgb(0,0,33) ;
+}
+.secondsection{
+    width: 100vw;
+    margin: auto;
+    height: 80vh;
+    background-color: #0e0e1a;
+}
+main hr{
+    border: 0;
+    background-color: #9c97f1;
+    height: 1.2px;
+    margin: 60px 84px;
+}
+.secondsection h1{
+    font-size: 1.9rem;
+}
+.text-grey{
+    color: gray;
+}
+.secondsection .box{
+    background-color:white;
+    width: 82vw;
+    height: 2px;
+    margin: 56px 0;
+    margin-left: 100px;
+    margin-right: 40px;
+    display: flex;
+}
+.secondsection .vertical{
+    height:90px;
+    width: 1px;
+    background-color:white;
+    margin: 0 100px;
+    justify-content: center;
+}
+.image-top{
+    width: 23px;
+    position: relative;
+    top: -32px;
+    left: -9px;
+}
+.vertical-title{
+position: relative;
+top: 75px;
+width: 150px;
+color: #9c97f1;
+
+}
+.vertical-desc{
+    position: relative;
+    top: 86px;
+    color:white;
+    width: 150px;
+    font-size: 15px;
+}
+footer{
+    height: 233px;
+    background-color: rgb(207, 205, 203);
+
+}
+
+.footer{
+    display: flex;
+    padding: 23px 122px;
+    justify-content: space-evenly;
+
+}
+.footer ul{
+    color: black;
+}
+.footer > div{
+    width: 223px;
+}
+footer .footer-rights{
+    text-align: center;
+    color: gray;
+    padding: 12px 0;
+}
+
+
+@media(max-width :600px){
+    .nav{
+        background-color: gold;
+        color:#fff;
+        padding:0 5vw;
+
+}
+    .nav h2{
+     font-size: 2vw;
+     display: none;
+    }
+
+    .nav h4{
+        font-size: 1vw;
+        display: none;
+
+    }
+    .nav{
+        font-weight: 800;
+        
+    }
+    .right img{
+            height: 100%;
+            background-size: cover;
+        }
+        .nav button{
+            background-color:#FFA500; 
+            font-size: 2vw;
+            border-radius: 0.5vw;  
+        }
+        .content{
+            height: calc(100% - 100px);
+            width: 100%;
+            position: relative;}
+        }
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+  <a href="home.html">Home</a>
+  <a href="service.html">Services</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<div class="nav">
+    <h1><i class="fa-solid fa-bars"></i></a></h1>
+
+     <h2>Alpha <span>Trions</span></h2>
+     <div class="nav-part2">
+         <h4><i class="fa-solid fa-house"></i></h4>
+         <h4><a href="post.html">Post</a></h4>
+         <h4>Reels</h4>
+         <h4>Videos</h4>
+         <h4><a href="contact.html">Contact</a></h4>
+        <h4>
+        <input class="search"><i class="fa-solid fa-magnifying-glass"></i></input>
+         </h4>
+        <h3><a href="profile.html"><i class="fa-solid fa-circle-user"></i></a></h3>
+         <h4><i class="ri-menu-3-fill"></i></h4> </div>
+         
+ </div>
+
+
+ </div>
+ <div class="content">
+     <div class="left">
+         <h1>Decentralized <span>Content </span>sharing platform</h1>
+         <p> Operates without relying on a central authority, using blockchain technology or peer-to-peer (P2P) networks to create and distribute content directly among user.   </p>
+             <button> Explore Now</button>
+
+
+         </div>
+    <div class="right">
+    </div>
+
+     </div>
+    
+     </div>
+     <main>
+         <section class="firstSection">
+             <div class="leftSection">
+               Lets us <span>Create </span> 
+               <div>Different types of content here like.</div>
+               <span id="element"></span>
+               <div class="buuton">
+                 <button class="btn"><a href="sign-in.html">Create Account </button>
+                 <button class="btn"><a href="sign-in.html">Sign-in </a></button>
+               </div>
+             </div>
+             <div class="rightSection">
+                 <img src="content.jpg" alt=""></div>
+         </section>
+
+         <section class="secondsection">
+             <span class="text-gray">What I have done so far</span>
+             <h1>Work Experience</h1>
+              <div class="box">
+                 <div class="vertical">
+                     <img class="image-top" src="developer.png" alt="">
+                     <div class="vertical-title">
+                         Lifestyle
+                     </div>
+                     <div class="vertical-desc">
+                          Day-to-day activities, routines, personal stories, and experiences.
+
+                     </div>
+                 </div>
+
+                 <div class="vertical">
+                     <img class="image-top" src="developer.png" alt="">
+                     <div class="vertical-title">
+                         Travel
+                     </div>
+                     <div class="vertical-desc">
+                         Travel vlogs, destination guides, travel tips, and cultural experiences.
+
+                     </div>
+                 </div>
+
+                 <div class="vertical">
+                     <img class="image-top" src="developer.png" alt="">
+                     <div class="vertical-title">
+                         Fashion and Beauty
+                     </div>
+                     <div class="vertical-desc">
+                         Fashion and Beauty: Outfit ideas, makeup tutorials, skincare routines, and fashion hauls.
+
+                     </div>
+                 </div>
+
+                 <div class="vertical">
+                     <img class="image-top" src="developer.png" alt="">
+                     <div class="vertical-title">
+                         Fitness and Health:
+                     </div>
+                     <div class="vertical-desc">
+                         Workout routines, healthy eating tips, fitness challenges, and wellness advice.
+                     </div>
+                 </div>
+
+                 <div class="vertical">
+                     <img class="image-top" src="developer.png" alt="">
+                     <div class="vertical-title">
+                         Food and Cooking
+                     </div>
+                     <div class="vertical-desc">
+                         Recipe tutorials, cooking tips, food reviews, and meal prepping.
+                     </div>
+                 </div>
+
+                 <div class="vertical">
+                     <img class="image-top" src="developer.png" alt="">
+                     <div class="vertical-title">
+                         Technology and Gadgets: 
+                     </div>
+                     <div class="vertical-desc">
+                         Tech reviews, unboxings, how-tos, and gadget comparisons.
+                     </div>
+
+                     </div></div></section>
+
+
+                 <section class="secondsection">
+                     <span class="text-gray">What I have done so far</span>
+                     <h1>Work Experience</h1>
+                      <div class="box">
+                         <div class="vertical">
+                             <img class="image-top" src="developer.png" alt="">
+                             <div class="vertical-title">
+                                 Education and Tutorials
+                             </div>
+                             <div class="vertical-desc">
+                                 Language lessons, academic subjects, skill development, and how-to guides.
+                             </div>
+                         </div>
+     
+                         <div class="vertical">
+                             <img class="image-top" src="developer.png" alt="">
+                             <div class="vertical-title">
+                                 Art and Craft:
+                             </div>
+                             <div class="vertical-desc">
+                                 DIY projects, art tutorials, crafting techniques, and showcasing artwork.
+                             </div>
+                         </div>
+     
+                         <div class="vertical">
+                             <img class="image-top" src="developer.png" alt="">
+                             <div class="vertical-title">
+                                 Music and Dance
+                             </div>
+                             <div class="vertical-desc">
+                                 Music covers, dance routines, behind-the-scenes of music production, and dance challenges.
+                             </div>
+                         </div>
+     
+                         <div class="vertical">
+                             <img class="image-top" src="developer.png" alt="">
+                             <div class="vertical-title">
+                                 Comedy and Entertainment:
+                             </div>
+                             <div class="vertical-desc">
+                                 Funny skits, parodies, reaction videos, and comedic challenges.
+                             </div>
+                         </div>
+     
+                         <div class="vertical">
+                             <img class="image-top" src="developer.png" alt="">
+                             <div class="vertical-title">
+                                 Gaming:
+                             </div>
+                             <div class="vertical-desc">
+                                 Game reviews, live streams, gameplay highlights, and gaming tips.
+                             </div>
+                         </div>
+     
+                         <div class="vertical">
+                             <img class="image-top" src="developer.png" alt="">
+                             <div class="vertical-title">
+                                 Business and Entrepreneurship: 
+                             </div>
+                             <div class="vertical-desc">
+                                 Business tips, entrepreneurial journeys, marketing strategies, and financial advice.
+                             </div>
+
+                          
+                                    
+                         </div></div></section></main>
+         
+       
+ <footer>
+     <div class="footer">
+         <div class="footerfirst">
+             <ul>
+                 <li>home</li>
+                 <li>contact</li>
+                 <li>Services</li>
+                 <li>help</li>
+                 <li>social</li>
+             </ul>
+         </div>
+         <div class="footersecond">
+             <ul>
+                 <li>home</li>
+                 <li>contact</li>
+                 <li>Services</li>
+                 <li>help</li>
+                 <li>social</li>
+             </ul>
+         </div>
+         <div class="footerthird">
+             <ul>
+                 <li>home</li>
+                 <li>contact</li>
+                 <li>Services</li>
+                 <li>help</li>
+                 <li>social</li>
+             </ul>
+         </div>
+         <div class="footerfourth">
+             <ul>
+                 <li>home</li>
+                 <li>contact</li>
+                 <li>Services</li>
+                 <li>help</li>
+                 <li>social</li>
+             </ul> 
+         </div>
+     </div>
+ </footer>
+ <script src="https://kit.fontawesome.com/e25f641c28.js" crossorigin="anonymous"></script>
+ <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+ <script>
+     var typed = new Typed('#element', {
+       strings: ['photos','Short Videos','Long Vidios' ,'Stories',' Live Streaming','Carouel Posts',' Text POsts','Audio Posts','Blogs/Articles','User-Generated Content'],
+       typeSpeed: 50,
+     });
+   </script>
+ </div>
+ <script src="script.js"></script>
+</body>
+</html>
+
+</body>
+</html>
+
+</body>
+</html>

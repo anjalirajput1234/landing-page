@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar Example</title>
+    <link rel="stylesheet" href="style.css">
+    <style>/* style.css */
+        body {
+            font-family: "Lato", sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+        
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 25px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+        
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+        
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+        }
+        
+        .main-content {
+            margin-left: 200px; /* Adjust this margin to match the sidebar width */
+            padding: 16px;
+        }
+        
+        .openbtn {
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #111;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            margin-left: 15px;
+        }
+        
+        .openbtn:hover {
+            background-color: #444;
+        }
+        </style>
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <div class="main-content">
+        <button class="openbtn" onclick="openSidebar()">&#9776; Open Sidebar</button>
+        <h2>Main Content Area</h2>
+        <p>This is where the main content of the website goes.</p>
+    </div>
+
+    <script>// script.js
+        function openSidebar() {
+            document.getElementById("sidebar").style.width = "250px";
+        }
+        
+        function closeSidebar() {
+            document.getElementById("sidebar").style.width = "0";
+        }
+        </script>
+</body>
+</html>
+
+       
